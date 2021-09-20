@@ -1,0 +1,28 @@
+
+<!-- <p *ngIf=true>hello</p> -->
+<app-header [gname]=groupName></app-header>
+
+
+<div *ngIf="!goToChat">
+    <label> Group Name</label> 
+    <!-- {{users | json}} -->
+    <br>
+    <input type="text" placeholder="Enter Group Name" [(ngModel)]="groupName">
+    <br>
+    <label>Add Users</label>
+    <br>
+    <input type="text" [(ngModel)]="userName">
+    <button (click)="addUser()">Add User</button>
+    <br>
+    <br>
+    <br>
+    <button (click)="formGroup()" class="btn btn-primary">Create Group</button>
+</div>
+
+
+
+<!-- <p *ngFor="let message of arrOfMessages">{{message}}</p>  -->
+
+
+
+<!-- <app-footer></app-footer> -->

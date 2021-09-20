@@ -1,0 +1,20 @@
+<div class="row">
+  <!-- <div class="col-lg-12">
+    <app-header></app-header>
+  </div> -->
+  <div class="col-lg-12">
+     <app-body (user)=getDataFromChild($event)></app-body>
+  </div>
+ <br>
+</div>
+
+<footer class="footer bg-dark py-3 mt-auto">
+  <div class="container">
+    <div class="col-lg-12">
+      <app-footer [usersArr]="dataArr"></app-footer>
+    </div>
+    <!-- <span class="text-muted">
+      &copy; IBM 2021
+  </span>  -->
+  </div>
+</footer>

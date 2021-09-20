@@ -1,0 +1,38 @@
+
+    <!-- <app-message *ngFor='let msg of arrOfMessages'></app-message> -->
+
+    <!-- [(ngModel)]='userName' -->
+    <div class="container">
+    <div class="col-xs-12" style="background-color: beige;"> 
+        <p *ngFor="let mess of arrOfMessages" style="font-size: larger; font-weight: bold;">{{mess}}</p>
+    </div>
+
+
+    <br><br><br><br><br><br>
+  
+    <footer class="footer bg-dark py-3 mt-auto pull-left" style="margin-top: 48vh;position: fixed;">
+        <div class="container" style="display: flex;">
+
+            <div ng-app="myApp" ng-controller="myCtrl">
+                <!-- <label for="users">Choose a user:</label> -->
+                <select 
+                style="width: 350px;height: 50px;"
+                name="users"
+                id="users"
+                ng-model="selectedName" ng-options="user for user in usersArr"
+                [(ngModel)]="selectedUser">
+                <option value="" style="font-weight: bold;">select a user</option>
+                <option *ngFor="let user of usersArr">{{user}}</option>
+                
+                </select>
+                
+            </div>
+        
+            <input type="text" placeholder=" type your message here " [(ngModel)]='msgText' style="width: 1000px; align-content: center;">
+            <button class="btn btn-primary" (click)="sendMessage()" style="width: 500px;">Send</button>
+       
+         
+    </div>
+</footer> 
+  
+</div>
